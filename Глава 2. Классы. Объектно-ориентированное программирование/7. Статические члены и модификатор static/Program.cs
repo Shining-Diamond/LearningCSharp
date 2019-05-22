@@ -15,18 +15,21 @@ namespace _7.Статические_члены_и_модификатор_static
             Account.MinSum = 560;
             decimal result = Account.GetSum(1000, 10, 5);
 
+            Account first = new Account(561, 5);
+
             Console.WriteLine(result);
+            Console.WriteLine(Account.Counter); // 1
 
             Console.ReadKey();
         }
     }
 
-    class Account
+    class Account : AccountBase
     {
         /// <summary>
-        /// Минимальная допустимая сумма для всех счетов
+        /// Счетчик количества объектов
         /// </summary>
-        private static decimal minSum = 100;
+        private static int counter = 0;
 
         /// <summary>
         /// Cумма на счете
@@ -38,10 +41,7 @@ namespace _7.Статические_члены_и_модификатор_static
         /// </summary>
         public decimal Rate { get; private set; }
 
-        /// <summary>
-        /// Количество созданных объектов
-        /// </summary>
-        private static int counter = 0;
+        public static int Counter { get { return counter; } }
 
         public Account(decimal sum, decimal rate)
         {
@@ -50,6 +50,14 @@ namespace _7.Статические_члены_и_модификатор_static
 
             counter++;
         }
+    }
+
+    class AccountBase
+    {
+        /// <summary>
+        /// Минимальная допустимая сумма для всех счетов
+        /// </summary>
+        protected static decimal minSum = 100; // минимальная допустимая сумма для всех счетов
 
         /// <summary>
         /// Минимальная допустимая сумма для всех счетов
@@ -72,9 +80,7 @@ namespace _7.Статические_члены_и_модификатор_static
             decimal result = sum;
 
             for (int i = 1; i <= period; i++)
-            {
                 result = result + result * rate / 100;
-            }
 
             return result;
         }
