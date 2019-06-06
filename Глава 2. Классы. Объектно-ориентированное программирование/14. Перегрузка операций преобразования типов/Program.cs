@@ -27,21 +27,24 @@ namespace _14.Перегрузка_операций_преобразования
         class Counter
         {
             public int Seconds { get; set; }
- 
+
             public static implicit operator Counter(int x)
             {
                 return new Counter { Seconds = x };
             }
+
             public static explicit operator int(Counter counter)
             {
                 return counter.Seconds;
             }
+
             public static explicit operator Counter(Timer timer)
             {
                 int h = timer.Hours * 3600;
                 int m = timer.Minutes * 60;
                 return new Counter { Seconds = h + m + timer.Seconds };
             }
+
             public static implicit operator Timer(Counter counter)
             {
                 int h = counter.Seconds / 3600;
