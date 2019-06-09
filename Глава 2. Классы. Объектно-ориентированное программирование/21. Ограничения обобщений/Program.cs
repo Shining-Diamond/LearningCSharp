@@ -21,7 +21,20 @@ namespace _21.Ограничения_обобщений
 
             transaction.Execute();
 
+            Transact<Account<int>>(account, account2, 500);
+
             Console.ReadKey();
+        }
+
+        public static void Transact<T>(T acc1, T acc2, int sum) where T : Account<int>
+        {
+            if (acc1.Sum > sum)
+            {
+                acc1.Sum -= sum;
+                acc2.Sum += sum;
+            }
+
+            Console.WriteLine($"FromAccount: {acc1.Sum} ToAccount: {acc2.Sum}");
         }
     }
 
