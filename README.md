@@ -97,7 +97,7 @@
   * + Обобщенные коллекции
   * + Список List<T>
   * + Двухсвязный список LinkedList<T>
-  * Очередь Queue<T>
+  * + Очередь Queue<T>
   * Стек Stack<T>
   * Словарь Dictionary<T, V>
   * Класс ObservableCollection
