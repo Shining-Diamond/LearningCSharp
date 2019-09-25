@@ -98,8 +98,8 @@
   * + Список List<T>
   * + Двухсвязный список LinkedList<T>
   * + Очередь Queue<T>
-  * Стек Stack<T>
-  * Словарь Dictionary<T, V>
+  * + Стек Stack<T>
+  * + Словарь Dictionary<T, V>
   * Класс ObservableCollection
   * Интерфейсы IEnumerable и IEnumerator
   * Итераторы и оператор yield
