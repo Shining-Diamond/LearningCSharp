@@ -101,7 +101,7 @@
   * + Стек Stack<T>
   * + Словарь Dictionary<T, V>
   * + Класс ObservableCollection
-  * Интерфейсы IEnumerable и IEnumerator
+  * + Интерфейсы IEnumerable и IEnumerator
   * Итераторы и оператор yield
   
 + Работа с потоками и файловой системой
