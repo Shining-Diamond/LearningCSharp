@@ -100,7 +100,7 @@
   * + Очередь Queue<T>
   * + Стек Stack<T>
   * + Словарь Dictionary<T, V>
-  * Класс ObservableCollection
+  * + Класс ObservableCollection
   * Интерфейсы IEnumerable и IEnumerator
   * Итераторы и оператор yield
   
